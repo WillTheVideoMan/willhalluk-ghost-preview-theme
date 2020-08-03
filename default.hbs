@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="{{@site.lang}}">
+<head>
+
+    {{!-- Document Settings --}}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    {{!-- Base Meta --}}
+    <title>Preview | {{meta_title}}</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    {{!-- Styles'n'Scripts --}}
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Lora:ital,wght@0,400;0,600;1,400;1,600&family=Playfair+Display:ital,wght@0,400;0,600;0,900;1,400&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="{{asset "built/style.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "built/normalise.css"}}" />
+
+</head>
+<body>
+    {{ghost_head}}
+    {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
+    {{{body}}}
+    {{ghost_foot}}
+</body>
+</html>

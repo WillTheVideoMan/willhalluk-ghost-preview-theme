@@ -1,0 +1,174 @@
+/*
+ Here, the base line height is 1.5rem and the font scale is 1.2
+*/
+
+:root {
+  --primary-colour: black;
+  --accent-colour: #eee;
+  --background-colour: white;
+
+  --font-family-heading: "Playfair Display";
+  --font-family-body: "Lora";
+  --font-family-monospace: "IBM Plex Mono";
+
+  --font-size-heading-massive: calc(1rem * 1.2 * 1.2 * 1.2 * 1.2);
+  --font-size-heading-primary: calc(1rem * 1.2 * 1.2 * 1.2);
+  --font-size-heading-secondary: calc(1rem * 1.2 * 1.2);
+  --font-size-heading-tertiary: calc(1rem * 1.2);
+  --font-size-body-regular: 1rem;
+  --font-size-body-small: calc(1rem / 1.2);
+
+  --line-height-heading: calc(1.5rem - 0.3);
+  --line-height-body: 1.5rem;
+
+  --spacing-main-major: calc(1.5rem - 0.5rem);
+  --spacing-main-minor: 0;
+  --spacing-accent-major: calc(var(--spacing-main-major) * 3);
+  --spacing-accent-minor: calc(1.5rem - 0.5rem);
+
+  background-color: var(--background-colour);
+  box-sizing: border-box;
+  max-width: 64rem;
+  margin: auto;
+}
+
+@media only screen and (min-width: 36rem) {
+  :root {
+    font-size: 18px;
+  }
+}
+
+body {
+  margin: 0 var(--spacing-main-major) !important;
+}
+
+.body-container {
+  max-width: 36rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: var(--spacing-accent-major);
+}
+
+.dotted-wrapper {
+  padding: var(--spacing-main-major);
+  background-image: url("data:image/svg+xml,%3csvg width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='grey' stroke-width='3' stroke-dasharray='1.5 16' stroke-dashoffset='4' stroke-linecap='butt'/%3e%3c/svg%3e");
+}
+
+.article-container * {
+  max-width: 100%;
+  color: var(--primary-colour);
+}
+
+.article-container p,
+.article-container ul,
+.article-container ol,
+.article-container blockquote,
+.article-container figure,
+.article-container pre {
+  margin-top: var(--spacing-main-major);
+  margin-bottom: var(--spacing-main-minor);
+  line-height: var(--line-height-body);
+  font-family: var(--font-family-body);
+}
+
+.article-container h2,
+.article-container h3 {
+  margin-top: var(--spacing-accent-major);
+  margin-bottom: var(--spacing-accent-minor);
+  line-height: var(--line-height-heading);
+  font-family: var(--font-family-heading);
+  font-weight: 600;
+}
+
+.article-container h2 {
+  font-size: var(--font-size-heading-secondary);
+}
+
+.article-container h3 {
+  font-size: var(--font-size-heading-tertiary);
+}
+
+.article-container ul,
+.article-container ol {
+  padding-left: var(--spacing-main-major);
+}
+
+.article-container blockquote {
+  margin-left: 0;
+  text-indent: -0.4rem;
+  font-style: italic;
+}
+
+.article-container blockquote::before {
+  content: '"';
+}
+
+.article-container figure {
+  margin: var(--spacing-accent-major) 0;
+  font-size: var(--font-size-body-small);
+  text-align: center;
+}
+
+.article-container code,
+.centre-hero code {
+  color: var(--primary-colour);
+  background: var(--accent-colour);
+  font-family: var(--font-family-monospace);
+}
+
+.article-container pre {
+  color: var(--primary-colour);
+  font-size: var(--font-size-body-small);
+  background: var(--accent-colour);
+  padding: var(--spacing-main-major);
+  overflow-x: scroll;
+}
+
+.article-container header {
+  font-size: var(--font-size-body-small);
+  font-family: var(--font-family-heading);
+}
+
+.article-container header h1 {
+  font-size: var(--font-size-heading-primary);
+  font-weight: 900;
+}
+
+.article-container header div,
+.article-container header h1 {
+  margin-top: var(--spacing-main-minor);
+  margin-bottom: var(--spacing-accent-minor);
+}
+
+.centre-hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-family-heading);
+  text-align: center;
+}
+
+.centre-hero * {
+  color: var(--primary-colour);
+  max-width: 24rem;
+}
+
+.centre-hero header h1 {
+  margin: 0;
+  font-size: var(--font-size-heading-massive);
+  line-height: var(--line-height-heading);
+  font-weight: 900;
+}
+
+.centre-hero header div {
+  margin-top: var(--spacing-main-minor);
+  margin-bottom: var(--spacing-accent-minor);
+  line-height: var(var(--line-height-body));
+}
+
+.centre-hero main {
+  font-family: var(--font-family-body);
+  line-height: var(--line-height-body);
+}

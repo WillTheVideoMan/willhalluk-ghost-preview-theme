@@ -1,0 +1,43 @@
+{{!< default}}
+
+{{!-- Everything inside the #post tags pulls data from the post --}}
+{{#post}}
+
+<main>
+    <div class = "body-container">
+
+        <article class="article-container dotted-wrapper">
+
+            <header>
+
+                <h1>{{title}}</h1>
+
+                <div>
+
+                    {{#if primary_tag}}
+                        {{#primary_tag}}
+                        <a href="{{url}}">{{name}}</a>
+                        {{/primary_tag}}
+                    {{/if}}
+
+                    <span>/</span>
+                        
+                    <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY HH:MM:SS"}} UTC</time>
+                                
+                </div>
+
+                <div>{{reading_time}}</div>
+
+            </header>
+
+            <section>
+                {{content}}
+            </section>
+
+            
+        </article>
+
+    </div>
+</main>
+
+{{/post}}
